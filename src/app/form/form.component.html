@@ -6,22 +6,24 @@
 </div>
 
 <form [formGroup]= "Form">
-    <div class="form-group">
-        <label for="nom">Nom</label>
-        <input id="nom" type="text" formControlName="nom">
-    </div>
+    
     <div class="form-group">
         <label for="prenom">Prénom</label>
         <input id="prenom" type="text" formControlName="prenom">
     </div>
     <div class="form-group">
-        <label for="photo">Photo</label>
-        <input id="photo" type="text" formControlName="photo">
+        <label for="genre">Genre</label>
+        <input id="genre" type="text" formControlName="genre">
     </div>
     <div class="form-group">
-        <label for="telephone">Numéro de téléphone</label>
-        <input id="telephone" type="text" formControlName="telephone">
+        <label for="age">Age</label>
+        <input id="age" type= "number" formControlName="age">
+    </div> 
+    <div class="form-group">
+        <label for="interets">Intérêts</label>
+        <input id="interets" type="text" formControlName="interets">
     </div>
+   
     <div class="action-buttons">
         <button type="submit" (click)="onSubmitForm()">Enregistrer</button>
     </div>

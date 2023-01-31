@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 
 @Component({
@@ -12,19 +14,21 @@ export class FormComponent {
   Form!: FormGroup;
   newContact!:[]
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private httpClient: HttpClient) { }
 
   ngOnInit(): void {
 
     this.Form = this.formBuilder.group({
-      nom: ['', Validators.required],
-      prenom: [null, Validators.required],
-      photo: [null, Validators.required],
-      telephone: [null, [Validators.required , Validators.pattern('[0-9 ]{10}')]]
+      prenom: [null, Validators.required],      
+      genre: [null, Validators.required],
+      age: [null, Validators.required],
+      interets: [null, Validators.required],
+     
   });
   }
 
   onSubmitForm() {
+    //chercher la requete api specifique
     console.log('Valid?', this.Form.valid);
     console.log(this.Form.value);
 }
