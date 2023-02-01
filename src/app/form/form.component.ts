@@ -18,9 +18,9 @@ export class FormComponent {
 
     this.Form = this.formBuilder.group({
       nom: ['', Validators.required],
-      prenom: [null, Validators.required],
-      photo: [null, Validators.required],
-      telephone: [null, [Validators.required , Validators.pattern('[0-9 ]{10}')]]
+      genre: [null, Validators.required],
+      age: [null, Validators.required],
+      interet: [null, [Validators.required]]
   });
   }
 

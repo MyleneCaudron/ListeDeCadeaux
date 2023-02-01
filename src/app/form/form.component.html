@@ -7,20 +7,20 @@
 
 <form [formGroup]= "Form">
     <div class="form-group">
-        <label for="nom">Nom</label>
+        <label for="nom">Prénom</label>
         <input id="nom" type="text" formControlName="nom">
     </div>
     <div class="form-group">
-        <label for="prenom">Prénom</label>
-        <input id="prenom" type="text" formControlName="prenom">
+        <label for="genre">Genre</label>
+        <input id="genre" type="text" formControlName="genre">
     </div>
     <div class="form-group">
-        <label for="photo">Photo</label>
-        <input id="photo" type="text" formControlName="photo">
+        <label for="age">Age</label>
+        <input id="age" type="text" formControlName="age">
     </div>
     <div class="form-group">
-        <label for="telephone">Numéro de téléphone</label>
-        <input id="telephone" type="text" formControlName="telephone">
+        <label for="interet">Interets</label>
+        <input id="interet" type="text" formControlName="interet">
     </div>
     <div class="action-buttons">
         <button type="submit" (click)="onSubmitForm()">Enregistrer</button>
