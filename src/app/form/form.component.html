@@ -6,9 +6,10 @@
 </div>
 
 <form [formGroup]= "Form">
+    
     <div class="form-group">
-        <label for="nom">Prénom</label>
-        <input id="nom" type="text" formControlName="nom">
+        <label for="genre">Genre</label>
+        <input id="genre" type="text" formControlName="genre">
     </div>
     <div class="form-group">
         <label for="genre">Genre</label>
@@ -16,12 +17,13 @@
     </div>
     <div class="form-group">
         <label for="age">Age</label>
-        <input id="age" type="text" formControlName="age">
-    </div>
+        <input id="age" type= "number" formControlName="age">
+    </div> 
     <div class="form-group">
-        <label for="interet">Interets</label>
-        <input id="interet" type="text" formControlName="interet">
+        <label for="interets">Intérêts</label>
+        <input id="interets" type="text" formControlName="interets">
     </div>
+   
     <div class="action-buttons">
         <button type="submit" (click)="onSubmitForm()">Enregistrer</button>
     </div>

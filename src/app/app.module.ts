@@ -1,37 +1,29 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { CardComponent } from './card/card.component';
 import { FormComponent } from './form/form.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    CardComponent,
     FormComponent
   ],
   imports: [
     BrowserModule,
-
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-   
-    RouterModule.forRoot([
-      {path:'', pathMatch: 'full', redirectTo: 'home'},
-      {path: 'home', component : HomeComponent},
-      { path: 'formulaire', component: FormComponent },
+    HttpClientModule
 
-
-
-    ])
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-
-  
-}
+export class AppModule { }
