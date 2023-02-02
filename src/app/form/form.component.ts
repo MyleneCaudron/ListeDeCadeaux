@@ -32,15 +32,15 @@ export class FormComponent {
   onSubmitForm() {
 
    const prenom = this.form.value.prenom;
-   const sexe = this.form.value.sexe;
+   const sexe = this.form.value.genre;
    const age = this.form.value.age;
-   const interet = this.form.value.interet;
+   const interet = this.form.value.interets;
 
   
 
 
-   this.serviceGpt.getDataFromOpenAI("Bonjour mon prénom est "+prenom+" je suis de sexe "+sexe+" ,j'ai "+age+" ans et je cherche un cadeau en relation avec ma passion : "+interet);
-
+   this.serviceGpt.getDataFromOpenAI("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet);
+console.log("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet)
 
 
     console.log('Valid?', this.form.valid);
