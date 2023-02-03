@@ -5,6 +5,7 @@ import { OpenAiService } from '../open-ai.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { compileClassMetadata } from '@angular/compiler';
 import { Cadeau } from '../model/cadeau.model';
+import { ListComponent } from '../list/list.component';
 
 
 
@@ -16,11 +17,11 @@ import { Cadeau } from '../model/cadeau.model';
 export class FormComponent {
 
   form!: FormGroup;
-  newCadeau!:Cadeau[]
   reponseGpt!: string;
+  listofGifts!: Cadeau[];
 
   constructor(private formBuilder: FormBuilder,private httpClient: HttpClient, 
-    private serviceGpt : OpenAiService, private route: Router ) { 
+    private serviceGpt : OpenAiService, private route: Router) { 
 
 
 
@@ -65,7 +66,8 @@ console.log("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "
         },
       complete: ()=>{
 
-        this.newCadeau = JSON.parse(this.reponseGpt);
+        this.listofGifts = JSON.parse(this.reponseGpt);
+
       }
 
         

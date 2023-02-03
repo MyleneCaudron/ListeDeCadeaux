@@ -26,12 +26,14 @@
     </div>
     
    
-    <div class="action-buttons">
+    
         <button type="submit" (click)="onSubmitForm()">Enregistrer</button>
 
-    </div>
+    
 
     
 </form>
 
-<div *ngFor="let cadeau of newCadeau">{{cadeau.nom}}</div>
+<div >
+<app-list [listdeCadeaux]="listofGifts"></app-list>
+</div>

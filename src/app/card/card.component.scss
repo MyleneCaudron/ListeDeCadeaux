@@ -1,13 +1,45 @@
-.card{ 
-    width: 300px;
-    background-color: adjust-color($color: #c52727);
+
+
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 8px black;
+
+    background-color:rgb(222,63,26);
 }
 
-img{
-    width: 300px; 
+
+.photo {
+    max-width: 150px;
 }
 
-.card-text{
-    justify-content: center;
+.photo img {
+    width: 100%;
+    border-radius: 100px;
+    border: 3px solid black;
 }
+
+.card ul {
+    padding: 0 20px;
+}
+
+.card li {
+    list-style-type: none;
+}
+
+h3, h4 {
+    margin: 10px;
+    padding: 0px;
+}
+
+h4 {
+    font-weight: normal;
+}
+
 

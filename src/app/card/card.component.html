@@ -1,10 +1,21 @@
-<div>
-    <h1>
+
+
+
+<div class="card" >
+
+    <h3>
         {{cadeau.nom}} 
-        {{cadeau.detail}} 
+    </h3>
 
+    <div class="photo">
+        <img src="https://www.capital.fr/imgre/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fcap.2F2021.2F10.2F13.2F769e6d8b-3b4f-418a-9601-7172b76769c9.2Ejpeg/790x395/background-color/ffffff/focus-point/1177%2C656/quality/70/picwictoys-demandait-une-surprenante-contrepartie-aux-associations-qui-emballent-les-cadeaux-de-noel.jpg" alt="photo">
+    </div>
 
-    </h1>
+    <h4>
+        {{ cadeau.detail | titlecase }}
+    </h4>
 
 </div>
+         
 
+        
