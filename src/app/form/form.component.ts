@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { OpenAiService } from '../open-ai.service';
+import { Cadeau } from '../model/cadeau.model';
 
 
 
@@ -13,7 +14,7 @@ import { OpenAiService } from '../open-ai.service';
 export class FormComponent {
 
   form!: FormGroup;
-  newContact!:[]
+  cadeauDetail!: Cadeau
 
   constructor(private formBuilder: FormBuilder,private httpClient: HttpClient, private serviceGpt : OpenAiService ) { }
 
@@ -35,11 +36,11 @@ export class FormComponent {
    const sexe = this.form.value.sexe;
    const age = this.form.value.age;
    const interet = this.form.value.interet;
-
-  
-
-
-   this.serviceGpt.getDataFromOpenAI("Bonjour mon prénom est "+prenom+" je suis de sexe "+sexe+" ,j'ai "+age+" ans et je cherche un cadeau en relation avec ma passion : "+interet);
+   const visu="";
+   this.serviceGpt.getDataFromOpenAI("Bonjour mon prénom est "+prenom+" je suis de sexe "+sexe+" ,j'ai "+age+" ans et je cherche un cadeau en relation avec ma passion pour : "+interet);
+   this.serviceGpt.receiveDataFromGpt(visu);
+   console.log(this.serviceGpt.receiveDataFromGpt(visu));
+   
 
 
 

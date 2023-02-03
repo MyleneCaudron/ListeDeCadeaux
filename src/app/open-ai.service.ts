@@ -33,10 +33,19 @@ export class OpenAiService {
       filter((data: any) => data.choices && data.choices.length > 0 && data.choices[0].text),
       map(data => data.choices[0].text)
     ).subscribe(data => {
-        console.log(data);
+        
         this.reponseGpt = JSON.stringify(data);
-    });
+
+        console.log(this.reponseGpt);
+        
+    },
+    
+    );
   }
 
 
+ receiveDataFromGpt(text:string){
+  text=this.reponseGpt
+  console.log("donné du retour");
+}
 }

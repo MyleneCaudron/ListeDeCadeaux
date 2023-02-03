@@ -9,6 +9,7 @@ import { Cadeau } from '../model/cadeau.model';
 export class CardComponent implements OnInit {
   
  @Input() cadeau !: Cadeau;
+ 
 
  ngOnInit(): void {
  
