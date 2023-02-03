@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Cadeau } from '../model/cadeau.model';
 
 @Component({
@@ -11,9 +12,12 @@ export class CardComponent implements OnInit {
  @Input() cadeau !: Cadeau;
  
 
- ngOnInit(): void {
- 
- }
+ constructor(private route: ActivatedRoute) {
+}
+
+ngOnInit(): void {
+    //const Identifiant = this.route.snapshot.params['liste'];
+}
  
  }
 
