@@ -7,12 +7,24 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { FormComponent } from './form/form.component';
 import { HttpClientModule} from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { Routes, RouterModule } from '@angular/router';
 
+
+const routes: Routes = [
+
+  { path: 'formulaire/', component: FormComponent },
+
+  {path: 'liste',
+  component: CardComponent},
+
+]
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    FormComponent
+    FormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +35,7 @@ import { HttpClientModule} from '@angular/common/http';
 
   
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,8 @@
 export class Cadeau{
     
-    nomCadeau !: string;
-    detailCadeau !: string;
+    nom!: string;
+    detail !: string;
+    prix!:number
     
     
 }
