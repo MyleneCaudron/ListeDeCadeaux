@@ -1,16 +1,46 @@
-    
-    form{
-        display: flex;
-        margin-bottom: 5%;
-    }
-    h3{
-        text-align: center;
-    }
+form {
+  display: flex;
+}
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
 
-    .form-group{
-        margin: 20px;
-    }
-form button{
-    height: 50px;
-    border-radius: 10px;
+.form-group {
+  margin: 20px;
+  height: 90px;
+  text-align: center;
+}
+
+form button {
+  height: 60px;
+  margin: 20px;
+  border-radius: 10px;
+  color: red;
+  background: #9fda90;
+  border: 1px solid #6eb45c;
+}
+
+form .bouton:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+form .bouton:active {
+  position: relative;
+  left: 1px;
+  top: 1px;
+}
+
+.complete {
+  background-color: rgb(243, 225, 197);
+  border-radius: 20px;
+  border: solid;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
 }
