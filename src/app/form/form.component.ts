@@ -15,14 +15,16 @@ import { Cadeau } from '../model/cadeau.model';
 })
 export class FormComponent {
 
+  gift!:Cadeau[];
+
   form!: FormGroup;
   newCadeau!:Cadeau[]
   reponseGpt!: string;
 
   constructor(private formBuilder: FormBuilder,private httpClient: HttpClient, 
-    private serviceGpt : OpenAiService, private route: Router ) { 
+    private serviceGpt : OpenAiService, private route: ActivatedRoute ) { 
 
-
+      
 
   
     }
@@ -50,7 +52,7 @@ export class FormComponent {
 
 
    //this.serviceGpt.getDataFromOpenAI("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+"avec une description des cadeaux et le prix. .Le resultat en format json( nom(en minuscule), prix(en minuscule), descriptif(minuscule))");
-console.log("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+"avec une description des cadeaux")
+console.log("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+"avec une description des cadeaux en json(nom,detail,prix) en français")
 
 
     console.log('Valid?', this.form.valid);

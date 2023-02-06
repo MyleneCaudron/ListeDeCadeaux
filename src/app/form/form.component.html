@@ -1,10 +1,7 @@
 <div class="form-card">
     
     <h3>Formulaire</h3>
-    <form [formGroup]= "form">
 
-    </form>
-</div>
 
 <form [formGroup]= "form">
     
@@ -34,4 +31,14 @@
     
 </form>
 
-<div *ngFor="let cadeau of newCadeau">{{cadeau.nom}}</div>
+</div>
+
+<div>
+<app-card-liste [listcadeau]="newCadeau"></app-card-liste>
+</div>
+
+<!-- <div class="cadeau" *ngFor="let cadeau of newCadeau">
+        {{cadeau.nom}} 
+         {{cadeau.detail}} 
+        {{cadeau.prix}}  -->
+

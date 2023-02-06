@@ -16,8 +16,9 @@ const routes: Routes = [
 
   { path: 'formulaire/', component: FormComponent },
 
-  {path: 'liste',
+  {path: 'liste/',
   component: CardComponent},
+
 
 ]
 @NgModule({

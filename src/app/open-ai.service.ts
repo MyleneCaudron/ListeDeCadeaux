@@ -25,7 +25,7 @@ export class OpenAiService {
   });
   readonly openai = new OpenAIApi(this.configuration);
 
-  
+ 
 
   getDataFromOpenAI(text: string) {
     return from(this.openai.createCompletion({

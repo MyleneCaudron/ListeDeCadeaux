@@ -1,7 +1,10 @@
 div{
-    display: flex;
-    justify-content: center;
-    background-color:rgb(240, 22, 22);
+
 
 }
 
+router-outlet {
+    //width: 300px;
+    display: flex;
+    //background-color: grey;
+  }

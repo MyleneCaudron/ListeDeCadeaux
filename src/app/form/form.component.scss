@@ -1,0 +1,29 @@
+.form-card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    align-items: center;
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.cadeau {
+
+    //width : 300 px;
+    //display: flex;
+    // background-color: green;
+    justify-content: space-around;
+    border-radius: 10px;
+
+}
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
