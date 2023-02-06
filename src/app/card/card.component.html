@@ -1,0 +1,24 @@
+
+
+
+<div class="card" >
+
+    <h3>
+        {{cadeau.nom}} 
+    </h3>
+
+    <div class="photo">
+        <!-- <img src = {{cadeau.photo}} -->
+        <img src={{cadeau.image|async}} alt="photo">
+    </div>
+
+    <h4>
+        {{ cadeau.detail | titlecase }}
+    </h4>
+    <h5>
+        {{ cadeau.prix + " Euros" }}
+    </h5>
+
+</div>
+         
+   

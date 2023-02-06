@@ -1,28 +1,56 @@
-<div class="form-card">
-    <h3>Formulaire</h3>
-    <form [formGroup]= "Form">
-
+<div class="complete">
+    <div class="form-card">
+    
+        <h1>Formulaire</h1>
+        <form [formGroup]= "form">
+        </form>
+    </div>
+    
+    <form [formGroup]= "form">
+    
+        <div class="form-group">
+            <label for="prenom"><strong>Prénom :</strong></label>
+            <br>
+            <input id="prenom" type="text" required="Prénom Requis" formControlName="prenom">
+    
+    
+        </div>
+        <div class="form-group">
+            <label for="genre"><strong>Genre:</strong></label>
+            <br>
+            <select formControlName="genre">
+            <option valeur="féminin">Féminin</option>
+            <option valeur="masculin">Masculin</option>
+            <option valeur="autre">Autre</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age"><strong>Âge :</strong></label>
+            <br>
+            <input id="age" type= "number" formControlName="age">
+        </div> 
+        <div class="form-group">
+            <label for="interets"><strong>Intérêts :</strong></label>
+            <br>
+            <input id="interets" type="text" formControlName="interets">
+        </div>
+        <div class="form-group">
+            <label for="prix"><strong>Budget en euros :</strong></label>
+            <br>
+            <input id="prix" type="text" formControlName="prix">
+        </div>
+    
+    
+    
+            <button type="submit" (click)="onSubmitForm()" (click)="enableDisableRule()" [ngClass]="{'green' : toggle, 'red': !toggle}"><strong>CHERCHER MES CADEAUX !</strong></button>
+    
+    
+    
+    
     </form>
-</div>
-
-<form [formGroup]= "Form">
-    <div class="form-group">
-        <label for="nom">Nom</label>
-        <input id="nom" type="text" formControlName="nom">
     </div>
-    <div class="form-group">
-        <label for="prenom">Prénom</label>
-        <input id="prenom" type="text" formControlName="prenom">
+    <br>
+    
+    <div >
+    <app-list [listdeCadeaux]="listofGifts"></app-list>
     </div>
-    <div class="form-group">
-        <label for="photo">Photo</label>
-        <input id="photo" type="text" formControlName="photo">
-    </div>
-    <div class="form-group">
-        <label for="telephone">Numéro de téléphone</label>
-        <input id="telephone" type="text" formControlName="telephone">
-    </div>
-    <div class="action-buttons">
-        <button type="submit" (click)="onSubmitForm()">Enregistrer</button>
-    </div>
-</form>
