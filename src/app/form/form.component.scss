@@ -1,29 +1,16 @@
-.form-card {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 100%;
-    align-items: center;
-    form {
-        width: 100%;
+    
+    form{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
+        margin-bottom: 5%;
     }
-}
+    h3{
+        text-align: center;
+    }
 
-.cadeau {
-
-    //width : 300 px;
-    //display: flex;
-    // background-color: green;
-    justify-content: space-around;
+    .form-group{
+        margin: 20px;
+    }
+form button{
+    height: 50px;
     border-radius: 10px;
-
 }
-
-@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');

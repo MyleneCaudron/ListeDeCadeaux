@@ -9,7 +9,7 @@ import { FormComponent } from './form/form.component';
 import { HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { Routes, RouterModule } from '@angular/router';
-import { CardListeComponent } from './card-liste/card-liste.component';
+import { ListComponent } from './list/list.component';
 
 
 const routes: Routes = [
@@ -27,7 +27,7 @@ const routes: Routes = [
     CardComponent,
     FormComponent,
     NavbarComponent,
-    CardListeComponent
+    ListComponent
   ],
   imports: [
     BrowserModule,
