@@ -20,5 +20,3 @@ ngOnInit(): void {
 }
  
  }
-
-

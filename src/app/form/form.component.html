@@ -11,7 +11,11 @@
     </div>
     <div class="form-group">
         <label for="genre">Genre</label>
-        <input id="genre" type="text" formControlName="genre">
+        <select formControlName="genre">
+        <option valeur="féminin">Féminin</option>
+        <option valeur="masculin">Masculin</option>
+        <option valeur="autre">Autre</option>
+        </select>
     </div>
     <div class="form-group">
         <label for="age">Age</label>
@@ -20,6 +24,10 @@
     <div class="form-group">
         <label for="interets">Intérêts</label>
         <input id="interets" type="text" formControlName="interets">
+    </div>
+    <div class="form-group">
+        <label for="prix"><strong>prix maximum</strong></label>
+        <input id="prix" type="text" formControlName="prix">
     </div>
     
    

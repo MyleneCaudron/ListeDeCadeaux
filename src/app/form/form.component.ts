@@ -31,13 +31,14 @@ export class FormComponent {
     }
 
 
-  ngOnInit(): void {
+    ngOnInit(): void {
 
-    this.form = this.formBuilder.group({
-      prenom: [null, Validators.required],      
-      genre: [null, Validators.required],
-      age: [null, Validators.required],
-      interets: [null, Validators.required],
+      this.form = this.formBuilder.group({
+        prenom: [null, Validators.required],
+        genre: [null, Validators.required],
+        age: [null, Validators.required],
+        interets: [null, Validators.required],
+        prix : [null,Validators.required]
      
   });
   }
@@ -48,18 +49,17 @@ export class FormComponent {
    const sexe = this.form.value.genre;
    const age = this.form.value.age;
    const interet = this.form.value.interets;
-
+   const prix = this.form.value.prix;
   
 
 
    //this.serviceGpt.getDataFromOpenAI("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+"avec une description des cadeaux et le prix. .Le resultat en format json( nom(en minuscule), prix(en minuscule), descriptif(minuscule))");
-console.log("Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+"avec une description des cadeaux en json(nom,detail,prix) en français")
+console.log("Trouve moi une liste de 6 cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+" avec une description des cadeaux en json(nom,detail,prix) en français")
 
 
     console.log('Valid?', this.form.valid);
     console.log(this.form.value);
-    let text="Trouve moi une liste de cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+"avec une description des cadeaux en json(nom,detail,prix) en français"
-    
+    let text ="Trouve moi une liste de 6 cadeaux pour "+prenom+" , "+sexe+" ,qui a "+age+" ans et qui aime "+interet+" avec une description des cadeaux en json(nom,detail,prix) en français, pour un prix maximum de" +prix+ "euros"    
 
     this.serviceGpt.getDataFromOpenAI(text).subscribe({
 
